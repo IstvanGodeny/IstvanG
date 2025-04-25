@@ -1,0 +1,191 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Istvan's Portfolio Website
+{% endblock %}
+
+{% block link %}
+
+{% endblock %}
+
+{% block script %}{% endblock %}
+
+{% block style %}
+
+{% endblock %}
+
+{% block lotti %}
+    <!-- Background, animated Lotti json -->
+    <div id="backgroundAnimation"></div>
+{% endblock %}
+
+{% block content %}
+    <main class="main-position">
+
+        <!-- Introduction, welcome -->
+        <div class="ms-6">
+            <h1>_> Hello.</h1>
+            <p class="p-width-1">I'm Istvan, a junior Python developer. Over the past year, I've gained many skills in scripting, GUI, web development, data science, and more. Through various projects, I've honed my abilities, and I'm excited to share them with you.</p>
+            <p class="p-width-1">Thanks for joining me on this journey!</p>
+            <p class="p-width-1">Best, Istvan</p>
+        </div>
+
+        <!-- List of the icons -->
+        <div class="icon-container mt-5">
+            <span>
+                <img src="{{ url_for('static', filename='assets/svg/icons/Python.svg') }}" width="48" height="48" alt="SVG Icon">
+            </span>
+            <span>
+                <img src="{{ url_for('static', filename='assets/svg/icons/Kivy.svg') }}" width="48" height="48" alt="SVG Icon">
+            </span>
+            <span>
+                <img src="{{ url_for('static', filename='assets/svg/icons/Bootstrap.svg') }}" width="48" height="48" alt="SVG Icon">
+            </span>
+            <span>
+                <img src="{{ url_for('static', filename='assets/svg/icons/Jinja.svg') }}" width="48" height="48" alt="SVG Icon">
+            </span>
+            <span>
+                <img src="{{ url_for('static', filename='assets/svg/icons/Selenium.svg') }}" width="48" height="48" alt="SVG Icon">
+            </span>
+            <span>
+                <img src="{{ url_for('static', filename='assets/svg/icons/Flask.svg') }}" width="48" height="48" alt="SVG Icon">
+            </span>
+            <span>
+                <img src="{{ url_for('static', filename='assets/svg/icons/HTML5.svg') }}" width="48" height="48" alt="SVG Icon">
+            </span>
+            <span>
+                <img src="{{ url_for('static', filename='assets/svg/icons/CSS3.svg') }}" width="48" height="48" alt="SVG Icon">
+            </span>
+        </div>
+
+        <!-- Favorite projects -->
+        <div class="row mt-5">
+            <h2>My Favorite Projects</h2>
+
+            <!-- Portfolio website -->
+            <div class="col-xxl-4 mt-2">
+                <div class="row">
+                    <div class="col-1 me-4">
+                        <span>
+                            <img src="{{ url_for('static', filename='assets/svg/favicon.svg') }}" width="48" height="48" alt="SVG Icon">
+                        </span>
+                    </div>
+                    <div class="col">
+                        <h3>This website</h3>
+                        <p class="p-width-2">As a junior Python programmer, it seems a bit odd to present this website as my favourite project. But it is relevant because I created it as a Flask application in Python.</p>
+                        <a href="#" class="link-text">
+                            read more...
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xxl-4 mt-2">
+                <div class="row">
+                    <div class="col-1 me-4">
+                        <span>
+                            <img src="{{ url_for('static', filename='assets/svg/feature-icon.svg') }}" width="48" height="48" alt="SVG Icon">
+                        </span>
+                    </div>
+                    <div class="col">
+                        <h3>Featured title</h3>
+                        <p class="p-width-2">Bodycopy lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xxl-4 mt-2">
+                <div class="row">
+                    <div class="col-1 me-4">
+                        <span>
+                            <img src="{{ url_for('static', filename='assets/svg/feature-icon.svg') }}" width="48" height="48" alt="SVG Icon">
+                        </span>
+                    </div>
+                    <div class="col">
+                        <h3>Featured title</h3>
+                        <p class="p-width-2">Bodycopy lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!--        <div class="row mt-5">-->
+<!--            <div class="col-xxl-4 mt-2 mt-xxl-4">-->
+<!--                <span>-->
+<!--                    <img src="{{ url_for('static', filename='assets/svg/feature-icon.svg') }}" width="66" height="66" alt="SVG Icon">-->
+<!--                </span>-->
+<!--                <div class="mt-2">-->
+<!--                    <h3>Featured title</h3>-->
+<!--                    <p class="p-width-3">Bodycopy lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>-->
+<!--                    <span>-->
+<!--                        <a href="#" class="link-text">-->
+<!--                            Call to action-->
+<!--                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">-->
+<!--                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>-->
+<!--                            </svg>-->
+<!--                        </a>-->
+<!--                    </span>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="col-xxl-4 mt-4">-->
+<!--                <span>-->
+<!--                    <img src="{{ url_for('static', filename='assets/svg/feature-icon.svg') }}" width="66" height="66" alt="SVG Icon">-->
+<!--                </span>-->
+<!--                <div class="mt-2">-->
+<!--                    <h3>Featured title</h3>-->
+<!--                    <p class="p-width-3">Bodycopy lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>-->
+<!--                    <a href="#" class="link-text">-->
+<!--                        Call to action-->
+<!--                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">-->
+<!--                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>-->
+<!--                        </svg>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="col-xxl-4 mt-4">-->
+<!--                <span>-->
+<!--                    <img src="{{ url_for('static', filename='assets/svg/feature-icon.svg') }}" width="66" height="66" alt="SVG Icon">-->
+<!--                </span>-->
+<!--                <div class="mt-2">-->
+<!--                    <h3>Featured title</h3>-->
+<!--                    <p class="p-width-3">Bodycopy lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>-->
+<!--                    <a href="#" class="link-text">-->
+<!--                        Call to action-->
+<!--                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">-->
+<!--                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>-->
+<!--                        </svg>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <button class="btn btn-custom btn-custom-text mt-5">Call to action</button>-->
+
+    </main>
+
+<!--    <div class="mt-5">-->
+<!--            <div class="card-custom card-custom-width card-custom-height">-->
+<!--                <div class="card-contet-box mx-auto my-auto">-->
+<!--                    <span>-->
+<!--                        <img src="{{ url_for('static', filename='assets/svg/feature-icon.svg') }}" width="66" height="66" alt="SVG Icon">-->
+<!--                    </span>-->
+<!--                    <div class="mt-2">-->
+<!--                        <h3>Featured title</h3>-->
+<!--                        <p class="p-width-3">Bodycopy lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>-->
+<!--                        <a href="#" class="link-text">-->
+<!--                            Call to action-->
+<!--                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">-->
+<!--                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>-->
+<!--                            </svg>-->
+<!--                        </a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+{% endblock %}

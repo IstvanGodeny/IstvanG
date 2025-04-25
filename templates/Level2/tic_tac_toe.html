@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Tic Tac Toe
+{% endblock %}
+
+{% block content %}
+    <main class="main-position">
+
+        <h1 class="ms-6">_> Python Scripting.</h1>
+
+        <h2 class="mt-5">
+            <a href="{{ url_for('projects') }}"
+               class="btn btn-custom btn-custom-text me-3"><</a>Tic Tac Toe
+        </h2>
+
+        <p class="mt-5">This project is the popular board game Tic Tac Toe.</p>
+        <p class="mt-5">You can play against an AI, which powered with Minimax algorythm. Good luck and enjoy!</p>
+        <p>This project covers the following main topics:</p>
+        <ul>
+            <li>List manipulation</li>
+            <li>Take user input</li>
+            <li>if check with all() function</li>
+            <li>FOR Loop</li>
+            <li>Minimax algorythm, basic AI programming</li>
+        </ul>
+        <p class="mt-4">You can try it yourself.</p>
+        <a href="https://istvan_g.pyscriptapps.com/tic-tac-toe/latest/"
+           class="btn btn-custom btn-custom-text">Try it here</a>
+
+    </main>
+{% endblock %}

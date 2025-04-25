@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+
+{% from 'bootstrap/form.html' import render_form %}
+
+{% block title %}
+    Gender and Age Finder
+{% endblock %}
+
+{% block content %}
+<div class="container mt-3 mb-3 text-start text-color">
+    <div class="p-4 p-md-5 mb-4 rounded gradient text-color">
+        <h1 class="text-color">
+            <a href="{{ url_for('projects') }}"
+               class="btn btn-info"><</a> HTTP Requests and APIs</h1>
+        <h2 class="text-color"> Gender and Age Finder </h2>
+
+        <div class="text-color">
+            <div class="row mt-3">
+                <div class="col-lg-6 text-start px-3">
+                    <h3>Let's try a simple API request</h3>
+                    <h5>How to use?</h5>
+                    <p>It is very simple. Type any Given Name into the text box and press "Ok".</p>
+                    <p>This simple app will use two APIs (genderize, agify). The APIs allow you to estimate the gender and the age of a person based on their first name.</p>
+                    <br>
+                    {{ render_form(form) }}
+                    <br>
+                    <p>If you want to check how it works, you can find some sort of data below to understand more about it.</p>
+
+                </div>
+                <div class="col text-start border border-info mx-3">
+                    <div class="px-3 my-3">
+                        <p>Here is the result when you click on the "Ok" button.</p>
+                        <h2>Hi there "{{ name }}"!</h2>
+                        <h4>You are maybe a "{{ gender }}".</h4>
+                        <h6>You are maybe "{{ age }}" old.</h6>
+                    </div>
+                    <a href="{{ url_for('gender_age', page_name='gender_and_age_finder') }}"
+                       class="btn btn-info mx-3 mt-3">Reset</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr><hr>
+
+    <div class="p-4 p-md-5 mb-4 rounded gradient text-color">
+        <div class="text-start">
+            <h3 class="text-color">Content</h3>
+            <ul class="text-color">
+                <li>
+                    <h5>Definitions</h5>
+                </li>
+                <li>
+                    <h5>API sources</h5>
+                </li>
+            </ul>
+        </div>
+        <br>
+        <hr class="text-color">
+        <br>
+        <div class="text-color">
+            <h3><u>Definitions</u></h3>
+            <h5>HTTP Requests</h5>
+            <p>HTTP requests are messages sent by a client (like your browser or a mobile app) to a server. They ask the server to perform specific actions, like fetching data, submitting a form, or deleting a resource. There are several types of HTTP requests, but the most common ones are:</p>
+            <ul>
+                <li>
+                    <p><b>GET:</b> Retrieve information from the server.</p>
+                </li>
+                <li>
+                    <p><b>POST:</b> Send data to the server (e.g., form submission).</p>
+                </li>
+                <li>
+                    <p><b>PUT / PATCH:</b>Update existing information on the server.</p>
+                </li>
+                <li>
+                    <p><b>DELETE:</b> Remove information from the server.</p>
+                </li>
+            </ul>
+            <br>
+            <h5>API</h5>
+            <p>An API is a set of rules that allows different software applications to communicate with each other. Think of it as a messenger that takes requests, tells a system what to do, and returns the response. APIs can be used for anything from integrating third-party services (like payment gateways) to pulling data from a database.</p>
+            <p>In essence:</p>
+            <ul>
+                <li>
+                    <p><b>HTTP requests</b> are the way we send and receive data over the web.</p>
+                </li>
+                <li>
+                    <p><b>APIs</b> are the interfaces that allow different software systems to communicate using those HTTP requests.</p>
+                </li>
+            </ul>
+            <p>Imagine wanting to check the weather from an app: the app sends an HTTP request to a weather API, which then returns the weather data.</p>
+        </div>
+        <br>
+        <div class="text-color">
+            <div>
+                <h3><u>API sources</u></h3>
+                <h5>Genderize API</h5>
+                <p>Genderize API</p>
+                <p>A simple API that checks the gender of a person based on a first name The Genderize API allows you to check the statistical probability of a name being male or female</p>
+                <p>The API exposes a single endpoint that accepts a name and returns a payload with the prediction. It uses query parameters for requests and returns JSON-encoded responses.</p>
+                <a href="https://genderize.io/documentation#overview" target="_blank" class="btn btn-info">More information about Genderize</a>
+            </div>
+            <br>
+            <div>
+                <h5>Agify API</h5>
+                <p>Agify API</p>
+                <p>A simple API that estimates the age of a person based on a first name The Agify API allows you to estimate the age of a person based on their first name.</p>
+                <p>The API exposes a single endpoint that accepts a name and returns a payload with the prediction. It uses query parameters for requests and returns JSON-encoded responses.</p>
+                <a href="https://agify.io/documentation" target="_blank" class="btn btn-info">More information about Agify</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

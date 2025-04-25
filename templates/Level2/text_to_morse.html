@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Text to Morse Code Converter
+{% endblock %}
+
+{% block link %}{% endblock %}
+
+{% block script %}{% endblock %}
+
+{% block style %}{% endblock %}
+
+{% block lotti %}
+    <!-- Background, animated Lotti json -->
+    <div id="backgroundAnimation"></div>
+{% endblock %}
+
+{% block content %}
+
+    <main class="main-position">
+
+        <h1 class="ms-6">_> Python Scripting.</h1>
+
+        <h2 class="mt-5">
+            <a href="{{ url_for('projects') }}"
+               class="btn btn-custom btn-custom-text me-3"><</a>Text to Morse Converter
+        </h2>
+
+        <p class="mt-5">This is a very simple project. As the name suggests in this case we can translate a simple text into a morse code.</p>
+        <p>This project covers the following main topics:</p>
+        <ul>
+            <li>Create dictionary</li>
+            <li>Take user input</li>
+            <li>Read the data from dictionary</li>
+            <li>FOR Loop</li>
+            <li>Join the list items for a single string</li>
+        </ul>
+        <p class="mt-4">You can try it yourself.</p>
+        <a href="https://istvan_g.pyscriptapps.com/text-to-morse-code-converter/latest/"
+           class="btn btn-custom btn-custom-text">Try it here</a>
+
+    </main>
+{% endblock %}

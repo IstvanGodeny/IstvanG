@@ -1,0 +1,175 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Projects
+{% endblock %}
+
+{% block lotti %}
+    <!-- Background, animated Lotti json -->
+    <div id="backgroundAnimation"></div>
+{% endblock %}
+
+
+{% block content %}
+    <main class="main-position">
+        <div class="ms-6">
+            <h1>_> Projects.</h1>
+            <p class="p-width-1">During my learning path, I have undertaken various small projects, each serving as a stepping stone in enhancing my skills and expanding my knowledge.</p>
+            <p class="p-width-1">These projects are a testament to my dedication and growth in Python development, and I am excited to present them to you to showcase my current capabilities.</p>
+        </div>
+
+        <div class="row mt-5">
+
+            <!-- Python Scripts -->
+            <div class="col-xxl-4 mt-2">
+                <div class="row">
+                    <div class="col-1 me-4">
+                        <span>
+                            <img src="{{ url_for('static', filename='assets/svg/feature-icon.svg') }}" width="48" height="48" alt="SVG Icon">
+                        </span>
+                    </div>
+                    <div class="col">
+                        <h3>Python Scripts</h3>
+                        <p class="p-width-2">A Python script is a collection of commands in a file designed to be executed like a program. The file can of course contain functions and import various modules, but the idea is that it will be run or executed from the command line or from within a Python interactive shell to perform a specific task.</p>
+                        <span>
+                            <a href="#" class="link-text">
+                                Call to action
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                </svg>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-xxl-4 mt-2">
+                <div class="row">
+                    <div class="col-1 me-4">
+                        <span>
+                            <img src="{{ url_for('static', filename='assets/svg/feature-icon.svg') }}" width="48" height="48" alt="SVG Icon">
+                        </span>
+                    </div>
+                    <div class="col">
+                        <h3>HTML Requests and API's</h3>
+                        <p class="p-width-2">HTTP requests are messages sent by a client (like your browser or a mobile app) to a server. They ask the server to perform specific actions, like fetching data, submitting a form, or deleting a resource.</p>
+                        <span>
+                            <a href="#" class="link-text">
+                                Call to action
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                </svg>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xxl-4 mt-2">
+                <div class="row">
+                    <div class="col-1 me-4">
+                        <span>
+                            <img src="{{ url_for('static', filename='assets/svg/feature-icon.svg') }}" width="48" height="48" alt="SVG Icon">
+                        </span>
+                    </div>
+                    <div class="col">
+                        <h3>GUI</h3>
+                        <p class="p-width-2">A GUI, or Graphical User Interface, is a visual way for users to interact with electronic devices, such as computers, smartphones, or tablets. Instead of typing commands in text, users can interact with graphical elements like windows, icons, buttons, and menus.</p>
+                        <span>
+                            <a href="#" class="link-text">
+                                Call to action
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                </svg>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5 ms-auto">
+            <div id="card0" class="col mt-5">
+            <div class="card-custom card-custom-width card-custom-height">
+                <div class="mx-2 my-2">
+                    <div class="col mt-2">
+                        <div class="row">
+                            <div class="col-1 me-4">
+                                <span>
+                                    <img src="{{ url_for('static', filename='assets/svg/feature-icon.svg') }}" width="48" height="48" alt="SVG Icon">
+                                </span>
+                            </div>
+                            <div class="col">
+                                <h3>Python Scripting</h3>
+                                <p>A Python script is a collection of commands in a file designed to be executed like a program. The file can of course contain functions and import various modules, but the idea is that it will be run or executed from the command line or from within a Python interactive shell to perform a specific task.</p>
+                                <hr>
+                                <h4><u>My example projects</u></h4>
+                                <ul>
+                                    <li>Text to Morse Code Converter</li>
+                                    <a href="{{ url_for('text_to_morse') }}" class="link-text">
+                                        More information
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 15 15">
+                                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                        </svg>
+                                    </a>
+
+                                    <li>Tic Tac Toe</li>
+                                    <a href="{{ url_for('tic_tac_toe') }}" class="link-text">
+                                        More information
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                        </svg>
+                                    </a>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <div id="card1" class="col mt-5">
+            <div class="card-custom card-custom-width card-custom-height">
+                <div class="mx-2 my-2">
+                    <div class="col mt-2">
+                        <div class="row">
+                            <div class="col-1 me-4">
+                                <span>
+                                    <img src="{{ url_for('static', filename='assets/svg/feature-icon.svg') }}" width="48" height="48" alt="SVG Icon">
+                                </span>
+                            </div>
+                            <div class="col">
+                                <h3>Python Scripting</h3>
+                                <p>A Python script is a collection of commands in a file designed to be executed like a program. The file can of course contain functions and import various modules, but the idea is that it will be run or executed from the command line or from within a Python interactive shell to perform a specific task.</p>
+                                <hr>
+                                <h4><u>My example projects</u></h4>
+                                <ul>
+                                    <li>Text to Morse Code Converter</li>
+                                    <a href="{{ url_for('text_to_morse') }}" class="link-text">
+                                        More information
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 15 15">
+                                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                        </svg>
+                                    </a>
+
+                                    <li>Tic Tac Toe</li>
+                                    <a href="{{ url_for('tic_tac_toe') }}" class="link-text">
+                                        More information
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                        </svg>
+                                    </a>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </main>
+{% endblock %}
