@@ -27,6 +27,6 @@ var animation = lottie.loadAnimation({
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        path: 'static/assets/lotti/Animation.json' // Replace with your actual path
+        path: '/static/assets/lotti/Animation.json' // Replace with your actual path
     });
     animation.setSpeed(0.20);
