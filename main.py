@@ -17,7 +17,7 @@ bootstrap = Bootstrap5(app)
 
 ## Initial the Flask Form
 # A secret key is required to use CSRF with Flask Form
-app.config['SECRET_KEY'] = "***London2024***"
+app.config['SECRET_KEY'] = "Test1234"
 
 
 # Forms
