@@ -32,7 +32,7 @@ It highlights applications such as **Note Application**, **Tic Tac Toe Game**, a
 
 ├── static [folder]             # Main window with note list
 
-├──├──── static [folder]             # Main window with note list
+├────── static [folder]             # Main window with note list
 
 ├── note_card.py               # Custom note card widget
 
