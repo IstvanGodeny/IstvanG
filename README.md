@@ -30,17 +30,25 @@ It highlights applications such as **Note Application**, **Tic Tac Toe Game**, a
 
 ├── main.py                    # Application entry point
 
-├── static [folder]             # Main window with note list
+├── static [folder]
 
-├──────── static [folder]             # Main window with note list
+├───── assets [folder]         # Folder for lotti files, pngs and svgs
 
-├── note_card.py               # Custom note card widget
+├───── css [folder]            # Folder for style sheets
 
-├── add_new_note_card.py       # Dialog for adding notes
+├───── js [folder]             # Folder for javascripts
 
-├── edit_note_card.py          # Dialog for editing notes
+├───── scss [folder]
 
-├── notes.sqlite               # SQLite database (auto-generated)
+├── templates [folder]         # SQLite database (auto-generated)
+
+├───── Level1 [folder]         # Level1 HTML files
+
+├───── Level 2 [folder]        # Level2 HTML files
+
+├───── base.html               # Base of the webpages
+
+├───── base_html               # SAVED html file
 
 └── requirements.txt           # List of the dependencies
 
