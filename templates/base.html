@@ -34,7 +34,9 @@
     {% block style %}{% endblock %}
 
 </head>
-<body>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80" tabindex="0">
+    <div id="home" style="position: relative; top:-1px; height:1px;"></div>
 
     <div id="backgroundAnimation"></div>
 
@@ -44,32 +46,14 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
+                <!-- Navigation items -->
                 <div class="collapse navbar-collapse" id="navbarsExample05">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item me-5">
-                            <a class="nav-link {% if active_page == 'home' %}active{% endif %}" href="{{ url_for('home') }}">Home</a>
-                        </li>
-                        <li class="nav-item me-5">
-                            <a class="nav-link {% if active_page == 'about' %}active{% endif %}" href="{{ url_for('about') }}">About me</a>
-                        </li>
-                        <li class="nav-item me-5">
-                            <a class="nav-link {% if active_page == 'projects' %}active{% endif %}" href="{{ url_for('projects') }}">Projects</a>
-                        </li>
 
-                        {% if active_page == "text_to_morse" %}
-                        <li class="nav-item me-5">
-                            <a class="nav-link {% if active_page == 'text_to_morse' %}active{% endif %}" href="{{ url_for('text_to_morse') }}"> >Text to Morse Code Converter</a>
-                        </li>
-                        {% endif %}
-                        {% if active_page == "tic_tac_toe" %}
-                        <li class="nav-item me-5">
-                            <a class="nav-link {% if active_page == 'tic_tac_toe' %}active{% endif %}" href="{{ url_for('tic_tac_toe') }}"> >Tic Tac Toe</a>
-                        </li>
-                        {% endif %}
-
-                        <li class="nav-item me-5">
-                            <a class="nav-link {% if active_page == 'contact' %}active{% endif %}" href="{{ url_for('contact') }}">Contact</a>
-                        </li>
+                        <!-- Uniq nav items for specific pages -->
+                        {% block nav_items%}{%endblock%} 
+                        
                     </ul>
                 </div>
             </div>
@@ -80,7 +64,7 @@
             {% block content %}{% endblock %}
         </div>
 
-        <div class="footer-box">
+        <div id="footer" class="footer-box">
             <footer class="footer-content text-center">
                 <span class="">© {{ year }} Istvan Godeny | Designed by: ©MonaDesigns</span>
             </footer>

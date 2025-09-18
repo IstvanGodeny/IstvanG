@@ -1,11 +1,11 @@
-{% extends "base.html" %}
+{%extends 'base.html'%}
 
-{% block title %}
-    Tic Tac Toe
-{% endblock %}
+{%block title%}
+    Portfolio Website
+{%endblock%}
 
 {%block nav_items%}
-    {% if active_page == "tic_tac_toe" %}
+    {%if active_page=='portfolio_website'%}
         <li class="nav_item me-5">
             <a class="nav-link" href="/" onclick="if (history.length > 1) { history.back(); return false; }" style="text-decoration: none;">
                 <span data-tooltip="Click to go back" style='font-size:30px;'>
@@ -19,7 +19,7 @@
         </li>
 
         <li class="nav-item me-5">
-            <a data-tooltip="Top of this page" class="nav-link" href="#home">Tic Tac Toe Game</a>
+            <a data-tooltip="Top of this page" class="nav-link" href="#home">Portfolio Website</a>
         </li>
 
         <li class="nav-item me-5">
@@ -28,7 +28,7 @@
     {%endif%}
 {%endblock%}
 
-{% block content %}
+{%block content%}
     <main class="main-position">
 
         <div class="ms-6">
@@ -36,31 +36,14 @@
             <!-- Title -->
             <div style="margin-bottom: 5rem">
                 <h1>
-                    _> Tic Tac Toe Game
+                    _> Portfolio Website
                 </h1>
             </div>
 
             <!-- Description -->
             <div>
                 <h2 class="mb-4">Description</h2>
-                <h4 style="line-height: 1.6">Tic Tac Toe Game is an interactive desktop application developed with KivyMD, combining a modern material design interface with classic gameplay. Players can enter their names at the start, and the app dynamically tracks and displays their scores. The game includes smart dialogs for handling player setup, reset confirmation, quit warnings, as well as winner and draw announcements, ensuring a smooth user experience. A responsive design adapts the layout and font sizes to different window sizes, making the interface accessible across devices. The board uses color-coded symbols (X and O) to distinguish between players, with hover effects and styled buttons enhancing interactivity. After each round, the board resets automatically, updating scores while preserving the flow of play. Users can also fully reset the game, which clears scores and reinitializes player setup. This project demonstrates my ability to integrate custom UI components, responsive layouts, and event-driven logic in Python. It reflects a balance between functional gameplay and thoughtful user experience design.</h4>
-            </div>
-
-            <div class="mt-5 row mb-3">
-                <div class="col-auto">
-                    <span>
-                        <img src="{{ url_for('static', filename='assets/svg/github.svg') }}" width="25" height="25" alt="SVG Icon">
-                    </span>
-                </div>
-                <div class="col">
-                    <h4>
-                        <a data-tooltip="Click to visit of the GitHub page for this project" href="https://github.com/IstvanGodeny/Istvan_Python_Projects/tree/main/GUI%20-%20Desktop%20Applications/Tic%20Tac%20Toe%20Game" target="_blank" style="text-decoration: none">Check on my GitHub
-                            <span>
-                                <img src="{{ url_for('static', filename='assets/svg/right-chevron.svg') }}" width="25" height="25" alt="SVG Icon">
-                            </span>
-                        </a>
-                    </h4>
-                </div>
+                <h4 style="line-height: 1.6">Portfolio Website is a Flask-based web application designed to showcase my development projects in a modern, interactive format. The site features dedicated sections for applications such as the Note Application, Tic Tac Toe Game, and Image Watermarking tool, each presented with screenshots, icons, and short descriptions. Built with Flask and Jinja2 templating, the site dynamically organizes project content while maintaining a clean and responsive design. Frontend styling relies on Bootstrap, custom CSS, and SVG icons, ensuring a professional look across devices. Interactive elements such as Lottie animations and smooth navigation improve the overall user experience. The structure follows best practices for Flask apps, separating templates, static assets, and application logic. Deployment files (Procfile and requirements) are included to support hosting on cloud platforms like Heroku. This project demonstrates my ability to combine Python backend development with modern frontend technologies to deliver a polished portfolio site. By integrating visuals, project metadata, and structured navigation, the portfolio communicates technical skills and creative presentation effectively.</h4>
             </div>
 
             <!-- Navigation chevrons -->
@@ -91,27 +74,26 @@
                     </a>
                 </div>
             </div>
-        
+            
         </div>
 
-            
-        <div class="ms-6">
-            <!-- Screenshots, Screen recording -->
+        <!--<div class="ms-6">
+            <!--Screenshots, Screen Recordings
             <div>
                 <h3 id="screen_recording" class="mb-4" style="padding-top: 4rem;">Screen Recording</h3>
                 <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;">
                     <iframe
-                        src="https://www.youtube.com/embed/Y4VbqX8nhJ4"
+                        src="https://www.youtube.com/embed/6qIeWTj1jsM"
                         style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"
                         allow="autoplay; encrypted-media"
                         allowfullscreen
                         loading="lazy"
-                        title="Tic Tac Toe Game - Screen recording">
+                        title="Note Application - Screen recording">
                     </iframe>
                 </div>
             </div>
 
-            <!-- Navigation chevrons -->
+            <!-- Navigation chevrons
             <div style="margin-top: 2.5rem; margin-bottom: 10rem">
                 <div class="col-auto">
                     <a href="#screen_recording" style="text-decoration: none">
@@ -140,7 +122,7 @@
                 </div>
             </div>
 
-        </div>
+        </div>-->
 
     </main>
-{% endblock %}
+{%endblock%}
