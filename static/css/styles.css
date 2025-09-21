@@ -118,6 +118,8 @@ h4 { font-size: var(--font-size-18); font-family: var(--font-sans-serif); font-w
 
 li { font-size: var(--font-size-16); font-family: var(--font-sans-serif-condensed); font-weight: var(--font-weight-regular) }
 
+table {float: right;}
+
 .link-text { font-size: var(--font-size-16); font-family: var(--font-sans-serif); font-weight: var(--font-weight-bold); color: var(--green-2)}
 
 .card-custom-width { width: 27rem; }
@@ -145,6 +147,8 @@ li { font-size: var(--font-size-16); font-family: var(--font-sans-serif-condense
     h4 { font-size: var(--font-size-20); font-family: var(--font-sans-serif); font-weight: var(--font-weight-bold)}
 
     li { font-size: var(--font-size-18); font-family: var(--font-sans-serif-condensed); font-weight: var(--font-weight-regular)}
+
+    table {float: left;}
 
     .link-text { font-size: var(--font-size-18); font-family: var(--font-sans-serif); font-weight: var(--font-weight-bold); color: var(--green-2)}
 
@@ -175,6 +179,8 @@ li { font-size: var(--font-size-16); font-family: var(--font-sans-serif-condense
 
     li { font-size: var(--font-size-20); font-family: var(--font-sans-serif-condensed); font-weight: var(--font-weight-regular)}
 
+    table {float: right;}
+
     .link-text { font-size: var(--font-size-20); font-family: var(--font-sans-serif); font-weight: var(--font-weight-bold); color: var(--green-2)}
 
     .card-custom-width { width: 32rem; }
@@ -204,6 +210,8 @@ li { font-size: var(--font-size-16); font-family: var(--font-sans-serif-condense
 
     li { font-size: var(--font-size-22); font-family: var(--font-sans-serif-condensed); font-weight: var(--font-weight-regular)}
 
+    table {float: right;}
+
     .link-text { font-size: var(--font-size-22); font-family: var(--font-sans-serif); font-weight: var(--font-weight-bold); color: var(--green-2)}
 
     .card-custom-width { width: 35rem; }
@@ -232,6 +240,8 @@ li { font-size: var(--font-size-16); font-family: var(--font-sans-serif-condense
     h4 { font-size: var(--font-size-22); font-family: var(--font-sans-serif); font-weight: var(--font-weight-bold)}
 
     li { font-size: var(--font-size-22); font-family: var(--font-sans-serif-condensed); font-weight: var(--font-weight-regular)}
+
+    table {float: right;}
 
     .link-text { font-size: var(--font-size-22); font-family: var(--font-sans-serif); font-weight: var(--font-weight-bold); color: var(--green-2)}
 
