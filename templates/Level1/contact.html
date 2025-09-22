@@ -8,20 +8,13 @@
 
 {%block nav_items%}
     {% if active_page == "contact_me" %}
-        <li class="nav_item me-5">
-            <a class="nav-link" href="/" onclick="if (history.length > 1) { history.back(); return false; }" style="text-decoration: none;">
-                <span data-tooltip="Click to go back" style='font-size:30px;'>
-                    &#10554;
-                </span>
-            </a>
-        </li>
 
         <li class="nav-item me-5">
-            <a data-tooltip="Jump to Home page" class="nav-link" href="{{url_for('home')}}">Home</a>
+            <a class="nav-link" href="{{url_for('home')}}">Home</a>
         </li>
         
         <li class="nav-item me-5">
-            <a data-tooltip="Top of this page" class="nav-link {% if active_page == 'contact_me' %}active{% endif %}" href="{{ url_for('contact') }}">Contact Me</a>
+            <a class="nav-link {% if active_page == 'contact_me' %}active{% endif %}" href="{{ url_for('contact') }}">Contact Me</a>
         </li>
     {% endif %}
 {%endblock%}
@@ -35,7 +28,6 @@
             <div class="messageform">
                 {{render_form(form)}}
             </div>
-
         </div>
     </main>
 {% endblock %}

@@ -6,24 +6,17 @@
 
 {%block nav_items%}
     {% if active_page == "image_watermarking_application" %}
-        <li class="nav_item me-5">
-            <a class="nav-link" href="/" onclick="if (history.length > 1) { history.back(); return false; }" style="text-decoration: none;">
-                <span data-tooltip="Click to go back" style='font-size:30px;'>
-                    &#10554;
-                </span>
-            </a>
+
+        <li class="nav-item me-5">
+            <a class="nav-link" href="{{url_for('home')}}">Home</a>
         </li>
 
         <li class="nav-item me-5">
-            <a data-tooltip="Home" class="nav-link" href="{{url_for('home')}}">Home</a>
+            <a class="nav-link" href="#screen_recording">Screen Recording</a>
         </li>
 
         <li class="nav-item me-5">
-            <a data-tooltip="Top of this page" class="nav-link" href="#home">Image Watermarking Application</a>
-        </li>
-
-        <li class="nav-item me-5">
-            <a data-tooltip="Screen Recording" class="nav-link" href="#screen_recording">Screen Recording</a>
+            <a class="nav-link" href="#description">Description</a>
         </li>
 
     {%endif%}
@@ -36,16 +29,25 @@
         <div class="ms-6">
             
             <!-- Title -->
-            <div style="margin-bottom: 5rem">
+            <div>
                 <h2>
                     _> Image Watermarking Application
                 </h2>
             </div>
 
-            <!-- Description -->
+            <!-- Screenshots, Screen Recordings -->
             <div>
-                <h3 class="mb-4">Description</h2>
-                <h5 style="line-height: 1.6">Image Watermarking Application is a desktop tool built with Tkinter and ttkbootstrap, designed to add customizable watermarks to images with ease. Users can upload images in popular formats (JPEG, PNG, GIF), preview them in real time, and apply text-based watermarks. The app supports full customization, including font family, font size, text color, and precise position adjustment using sliders. It also provides a live preview so users can fine-tune the watermark before saving. A color chooser dialog lets users pick any text color, while a font setup feature dynamically loads system or custom fonts from a dedicated folder. The application includes menu options for file management, fullscreen mode, and theme selection, giving it a polished, professional feel. With a responsive layout and user-friendly controls, it balances functionality and design for both casual and professional use. Once finished, images can be saved with the watermark applied at the exact chosen position and scale. This project demonstrates my skills in GUI development, image manipulation (PIL), font management, and real-time event-driven programming.</h5>
+                <h3 id="screen_recording" class="mb-4" style="margin-top: 2rem; padding-top: 4rem;">Screen Recording</h3>
+                <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;">
+                    <iframe
+                        src="https://www.youtube.com/embed/LHwxMoP-ssQ"
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"
+                        allow="autoplay; encrypted-media"
+                        allowfullscreen
+                        loading="lazy"
+                        title="Image Watermarking Application - Screen recording">
+                    </iframe>
+                </div>
             </div>
 
             <div class="mt-5 row">
@@ -64,83 +66,16 @@
                     </h4>
                 </div>
             </div>
-
-            <!-- Navigation chevrons -->
-            <div style="margin-top: 2.5rem; margin-bottom: 10rem">
-                <div class="col-auto">
-                    <a href="#screen_recording" style="text-decoration: none">
-                        <span data-tooltip="Bottom">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-down-double.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-
-                    <a href="#screen_recording" style="text-decoration: none">
-                        <span data-tooltip="Next">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-down.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-
-                    <a href="#home" style="text-decoration: none">
-                        <span data-tooltip="Previous">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-up.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-
-                    <a href="#home" style="text-decoration: none">
-                        <span data-tooltip="Top">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-up-double.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </div>
-
             
-        <div class="ms-6">
-            <!-- Screenshots, Screen Recordings -->
-            <div>
-                <h3 id="screen_recording" class="mb-4" style="padding-top: 4rem;">Screen Recording</h3>
-                <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;">
-                    <iframe
-                        src="https://www.youtube.com/embed/LHwxMoP-ssQ"
-                        style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"
-                        allow="autoplay; encrypted-media"
-                        allowfullscreen
-                        loading="lazy"
-                        title="Image Watermarking Application - Screen recording">
-                    </iframe>
-                </div>
+            <!-- Description -->
+            <div id="description" style="margin-top: 5rem; margin-bottom: 8rem;">
+                <h3 class="mb-4">Description</h2>
+                <h4 style="line-height: 1.6">Image Watermarking Application is a desktop tool built with <strong>Tkinter</strong> and <strong>ttkbootstrap</strong>, designed to add customizable watermarks to images with ease.</h4>
+                <h4 style="line-height: 1.6">Users can upload images in popular formats (JPEG, PNG, GIF), preview them in real time, and apply text-based watermarks.</h4>
+                <h4 style="line-height: 1.6">The app supports full customization, including font family, font size, text color, and precise position adjustment using sliders. It also provides a live preview so users can fine-tune the watermark before saving. A color chooser dialog lets users pick any text color, while a font setup feature dynamically loads system or custom fonts from a dedicated folder.</h4>
+                <h4 style="line-height: 1.6">The application includes menu options for file management, fullscreen mode, and theme selection, giving it a polished, professional feel. With a responsive layout and user-friendly controls, it balances functionality and design for both casual and professional use. Once finished, images can be saved with the watermark applied at the exact chosen position and scale.</h4>
+                <h4 style="line-height: 1.6">This project demonstrates my skills in GUI development, image manipulation (PIL), font management, and real-time event-driven programming.</h4>
             </div>
-
-            <!-- Navigation chevrons -->
-            <div style="margin-top: 2.5rem; margin-bottom: 10rem">
-                <div class="col-auto">
-                    <a href="#screen_recording" style="text-decoration: none">
-                        <span data-tooltip="Bottom">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-down-double.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-
-                    <a href="#screen_recording" style="text-decoration: none">
-                        <span data-tooltip="Next">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-down.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-
-                    <a href="#home" style="text-decoration: none">
-                        <span data-tooltip="Previous">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-up.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-
-                    <a href="#home" style="text-decoration: none">
-                        <span data-tooltip="Top">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-up-double.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-                </div>
-            </div>
-
         </div>
     </main>
 {%endblock%}

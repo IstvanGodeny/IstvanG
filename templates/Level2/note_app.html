@@ -6,97 +6,36 @@
 
 {%block nav_items%}
     {% if active_page == "note_application" %}
-        <li class="nav_item me-5">
-            <a class="nav-link" href="/" onclick="if (history.length > 1) { history.back(); return false; }" style="text-decoration: none;">
-                <span data-tooltip="Click to go back" style='font-size:30px;'>
-                    &#10554;
-                </span>
-            </a>
+
+        <li class="nav-item me-5">
+            <a class="nav-link" href="{{url_for('home')}}">Home</a>
         </li>
 
         <li class="nav-item me-5">
-            <a data-tooltip="Home" class="nav-link" href="{{url_for('home')}}">Home</a>
+            <a class="nav-link" href="#screen_recording">Screen Recording</a>
         </li>
 
         <li class="nav-item me-5">
-            <a data-tooltip="Top of this page" class="nav-link" href="#home">Note Application</a>
+            <a class="nav-link" href="#description">Description</a>
         </li>
 
-        <li class="nav-item me-5">
-            <a data-tooltip="Screen Recording" class="nav-link" href="#screen_recording">Screen Recording</a>
-        </li>
     {%endif%}
 {%endblock%}
 
 {% block content %}
     <main class="main-position">
+
         <div class="ms-6">
             <!-- Title -->
-            <div style="margin-bottom: 5rem">
+            <div>
                 <h1>
                     _> Note Application
                 </h1>
             </div>
 
-            <!-- Description -->
-            <div>
-                <h2 class="mb-4">Description</h2>
-                <h4 style="line-height: 1.6">This is a lightweight desktop tool built with PySide6 and SQLite to organize personal notes in a simple, intuitive interface. Users can quickly create, edit, and delete notes, each displayed as clean, card-style widgets. The application features a scrollable view for managing multiple notes, a confirmation system to prevent accidental loss, and a modern design using custom fonts and styles. Data is stored securely in a local SQLite database, ensuring persistence between sessions. This project demonstrates my skills in GUI development, database integration, and modular application design in Python.</h4>
-            </div>
-
-            <div class="mt-5 row mb-3">
-                <div class="col-auto">
-                    <span>
-                        <img src="{{ url_for('static', filename='assets/svg/github.svg') }}" width="25" height="25" alt="SVG Icon">
-                    </span>
-                </div>
-                <div class="col">
-                    <h4>
-                        <a data-tooltip="Click to visit of the GitHub page for this project" href="https://github.com/IstvanGodeny/Istvan_Python_Projects/tree/main/GUI%20-%20Desktop%20Applications/Note%20Application" target="_blank" style="text-decoration: none">Check on GitHub
-                            <span>
-                                <img src="{{ url_for('static', filename='assets/svg/right-chevron.svg') }}" width="25" height="25" alt="SVG Icon">
-                            </span>
-                        </a>
-                    </h4>
-                </div>
-            </div>
-
-            <!-- Navigation chevrons -->
-            <div style="margin-top: 2.5rem; margin-bottom: 10rem">
-                <div class="col-auto">
-                    <a href="#screen_recording" style="text-decoration: none">
-                        <span data-tooltip="Bottom">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-down-double.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-
-                    <a href="#screen_recording" style="text-decoration: none">
-                        <span data-tooltip="Next">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-down.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-
-                    <a href="#home" style="text-decoration: none">
-                        <span data-tooltip="Previous">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-up.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-
-                    <a href="#home" style="text-decoration: none">
-                        <span data-tooltip="Top">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-up-double.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-
-            
-        <div class="ms-6">
             <!-- Screenshots, Screen Recordings -->
             <div>
-                <h3 id="screen_recording" class="mb-4" style="padding-top: 4rem;">Screen Recording</h3>
+                <h3 id="screen_recording" class="mb-4" style="margin-top: 2rem; padding-top: 4rem;">Screen Recording</h3>
                 <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;">
                     <iframe
                         src="https://www.youtube.com/embed/6qIeWTj1jsM"
@@ -108,36 +47,33 @@
                     </iframe>
                 </div>
             </div>
-
-            <!-- Navigation chevrons -->
-            <div style="margin-top: 2.5rem; margin-bottom: 10rem">
+            
+            <div class="mt-5 row mb-3">
                 <div class="col-auto">
-                    <a href="#screen_recording" style="text-decoration: none">
-                        <span data-tooltip="Bottom">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-down-double.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-
-                    <a href="#screen_recording" style="text-decoration: none">
-                        <span data-tooltip="Next">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-down.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-
-                    <a href="#home" style="text-decoration: none">
-                        <span data-tooltip="Previous">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-up.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-
-                    <a href="#home" style="text-decoration: none">
-                        <span data-tooltip="Top">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-up-double.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
+                    <span>
+                        <img src="{{ url_for('static', filename='assets/svg/github.svg') }}" width="25" height="25" alt="SVG Icon">
+                    </span>
+                </div>
+                <div class="col">
+                    <h4>
+                        <a class="link-text" href="https://github.com/IstvanGodeny/Istvan_Python_Projects/tree/main/GUI%20-%20Desktop%20Applications/Note%20Application" target="_blank" style="text-decoration: none">Check on GitHub
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 120 120" enable-background="new 0 0 120 120" xml:space="preserve" fill="#A8D8CA">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                <g id="SVGRepo_iconCarrier"> <polygon fill="#4ECEAD" points="102.296,59.957 42.264,119.99 25.605,103.34 85.639,43.299 "/> <polygon fill="#4ECEAD" points="85.74,76.71 25.715,16.653 42.373,0.011 102.391,60.067 "/> </g>
+                            </svg>
+                        </a>
+                    </h4>
                 </div>
             </div>
 
+            <!-- Description -->
+            <div id="description" style="margin-top: 5rem; margin-bottom: 8rem;">
+                <h2 class="mb-4">Description</h2>
+                <h4 style="line-height: 1.6">This is a lightweight desktop tool built with <strong>PySide6</strong> and <strong>SQLite</strong> to organize personal notes in a simple, intuitive interface. Users can quickly create, edit, and delete notes, each displayed as clean, card-style widgets.</h4>
+                <h4 style="line-height: 1.6">The application features a scrollable view for managing multiple notes, a confirmation system to prevent accidental loss, and a modern design using custom fonts and styles. Data is stored securely in a local <strong>SQLite</strong> database, ensuring persistence between sessions.</h4>
+                <h4 style="line-height: 1.6">This project demonstrates my skills in GUI development, database integration, and modular application design in Python.</h4>
+            </div>
         </div>
     </main>
 {% endblock %}

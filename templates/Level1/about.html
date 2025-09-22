@@ -6,13 +6,6 @@
 
 {%block nav_items%}
     {% if active_page == "about" %}
-        <li class="nav_item me-5">
-            <a class="nav-link" href="/" onclick="if (history.length > 1) { history.back(); return false; }" style="text-decoration: none;">
-                <span data-tooltip="Click to go back" style='font-size:30px;'>
-                    &#10554;
-                </span>
-            </a>
-        </li>
 
         <li class="nav-item me-5">
             <a class="nav-link" href="{{url_for('home')}}">Home</a>
@@ -29,9 +22,6 @@
     <main class="main-position">
         <div class="ms-6">
             <h1>_> About Istvan Godeny.</h1>
-            <!--<h4 style="margin-top: 2.5rem">Over the past 2 years,
-                I've gained many skills in scripting, GUI, web development, data science, and more.
-                Through various projects, I've honed my abilities, and I'm excited to share them with you.</h4>-->
             
             <h4 style="margin-top: 5rem">I am a persistent and motivated Python developer who has learned programming through self-study and continuous improvement. Software development is my passion: building efficient, well-designed programs that solve real problems. I believe code is not just a tool but a form of creative expression, where elegance and simplicity matter most.</h4>
 
@@ -43,44 +33,14 @@
 
             <h4 style="margin-top: 2.5rem">“Be brave to start, strong to continue, and dedicated to reach your goal.”</h4>
 
-            <a href="https://github.com/IstvanGodeny/Istvan_Python_Projects" style="margin-top:5rem" class="btn btn-custom btn-custom-text" target="_blank">
+            <a href="https://github.com/IstvanGodeny/Istvan_Python_Projects" style="margin-top:2.5rem; margin-bottom: 5rem" class="btn btn-custom btn-custom-text" target="_blank">
                 Projects on GitHub
             </a>
 
-            <!--<a href="http://127.0.0.1:5000/#contact" style="margin-top:5rem; margin-left: 2rem" class="btn btn-custom btn-custom-text">-->
-            <a href="https://istvang.pythonanywhere.com/#contact" style="margin-top:5rem; margin-left: 2rem" class="btn btn-custom btn-custom-text">
+            <!--<a href="http://127.0.0.1:5000/#contact" style="margin-top:5rem; margin-left: 2rem; margin-bottom: 5rem" class="btn btn-custom btn-custom-text">-->
+            <a href="https://istvang.pythonanywhere.com/#contact" style="margin-top:2.5rem; margin-left: 2rem; margin-bottom: 5rem" class="btn btn-custom btn-custom-text">
                 Reach out
             </a>
-
-            <!-- Navigation chevrons -->
-            <div style="margin-top: 2.5rem; margin-bottom: 10rem">
-                <div class="col-auto">
-                    <a href="#footer" style="text-decoration: none">
-                        <span data-tooltip="Bottom">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-down-double.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-
-                    <a href="#footer" style="text-decoration: none">
-                        <span data-tooltip="Next">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-down.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-
-                    <a href="#home" style="text-decoration: none">
-                        <span data-tooltip="Previous">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-up.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-
-                    <a href="#home" style="text-decoration: none">
-                        <span data-tooltip="Top">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-up-double.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-                </div>
-            </div>
         </div>
-
     </main>
 {% endblock %}

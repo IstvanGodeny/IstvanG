@@ -114,7 +114,7 @@ p { font-size: var(--font-size-16); font-family: var(--font-sans-serif-condensed
 h1 { font-size: var(--font-size-40); font-family: var(--font-sans-serif); font-weight: var(--font-weight-bold)}
 h2 { font-size: var(--font-size-30); font-family: var(--font-sans-serif); font-weight: var(--font-weight-bold)}
 h3 { font-size: var(--font-size-22); font-family: var(--font-sans-serif); font-weight: var(--font-weight-bold)}
-h4 { font-size: var(--font-size-18); font-family: var(--font-sans-serif); font-weight: var(--font-weight-bold)}
+h4 { font-size: var(--font-size-18); font-family: var(--font-sans-serif); font-weight: var(--font-weight-semibold)}
 
 li { font-size: var(--font-size-16); font-family: var(--font-sans-serif-condensed); font-weight: var(--font-weight-regular) }
 
@@ -131,6 +131,8 @@ td {padding-right: 1.5rem;}
 .main-position { margin: 2rem 0rem 0rem 0rem } /* top right bottom left */
 .ms-6 { margin-left: 1rem; }
 
+.contact-text { font-size: var(--font-size-22);}
+
 #backgroundAnimation { position: fixed; top: 0; left: 00px; width: 100%; height: 100%; opacity: 0.15; z-index: -1;}
 #scrollAnimation { position: relative; top: 100px; left: 200px; width: 8%; height: 8%; opacity: 0.8; z-index: -1;}
 #submit {font-size: var(--font-size-18)}
@@ -144,7 +146,7 @@ td {padding-right: 1.5rem;}
     h1 { font-size: var(--font-size-40); font-family: var(--font-sans-serif); font-weight: var(--font-weight-bold)}
     h2 { font-size: var(--font-size-30); font-family: var(--font-sans-serif); font-weight: var(--font-weight-bold)}
     h3 { font-size: var(--font-size-24); font-family: var(--font-sans-serif); font-weight: var(--font-weight-bold)}
-    h4 { font-size: var(--font-size-20); font-family: var(--font-sans-serif); font-weight: var(--font-weight-bold)}
+    h4 { font-size: var(--font-size-20); font-family: var(--font-sans-serif); font-weight: var(--font-semibold-bold)}
 
     li { font-size: var(--font-size-18); font-family: var(--font-sans-serif-condensed); font-weight: var(--font-weight-regular)}
 
@@ -161,6 +163,8 @@ td {padding-right: 1.5rem;}
     .main-position { margin: 4rem 0rem 0rem 0.5rem }
     .ms-6 { margin-left: 1rem; }
 
+    .contact-text { font-size: var(--font-size-24);}
+
     #backgroundAnimation { position: fixed; top: 0; left: 00px; width: 100%; height: 100%; opacity: 0.15; z-index: -1;}
     #scrollAnimation { position: relative; top: 100px; left: 225px; width: 8%; height: 8%; opacity: 0.8; z-index: -1;}
     #submit {font-size: var(--font-size-20)}
@@ -175,7 +179,7 @@ td {padding-right: 1.5rem;}
     h1 { font-size: var(--font-size-40); font-family: var(--font-sans-serif); font-weight: var(--font-weight-bold)}
     h2 { font-size: var(--font-size-30); font-family: var(--font-sans-serif); font-weight: var(--font-weight-bold)}
     h3 { font-size: var(--font-size-26); font-family: var(--font-sans-serif); font-weight: var(--font-weight-bold)}
-    h4 { font-size: var(--font-size-22); font-family: var(--font-sans-serif); font-weight: var(--font-weight-bold)}
+    h4 { font-size: var(--font-size-22); font-family: var(--font-sans-serif); font-weight: var(--font-semibold-bold)}
 
     li { font-size: var(--font-size-20); font-family: var(--font-sans-serif-condensed); font-weight: var(--font-weight-regular)}
 
@@ -192,6 +196,8 @@ td {padding-right: 1.5rem;}
     .main-position { margin: 6rem 0rem 0rem 1rem }
     .ms-6 { margin-left: 2rem; }
 
+    .contact-text { font-size: var(--font-size-26);}
+
     #backgroundAnimation { position: fixed; top: 0; left: 00px; width: 100%; height: 100%; opacity: 0.15; z-index: -1;}
     #scrollAnimation { position: relative; top: 100px; left: 300px; width: 8%; height: 8%; opacity: 0.8; z-index: -1;}
     #submit {font-size: var(--font-size-22)}
@@ -206,7 +212,7 @@ td {padding-right: 1.5rem;}
     h1 { font-size: var(--font-size-60); font-family: var(--font-sans-serif); font-weight: var(--font-weight-bold)}
     h2 { font-size: var(--font-size-40); font-family: var(--font-sans-serif); font-weight: var(--font-weight-bold)}
     h3 { font-size: var(--font-size-26); font-family: var(--font-sans-serif); font-weight: var(--font-weight-bold)}
-    h4 { font-size: var(--font-size-22); font-family: var(--font-sans-serif); font-weight: var(--font-weight-bold)}
+    h4 { font-size: var(--font-size-22); font-family: var(--font-sans-serif); font-weight: var(--font-semibold-bold)}
 
     li { font-size: var(--font-size-22); font-family: var(--font-sans-serif-condensed); font-weight: var(--font-weight-regular)}
 
@@ -223,6 +229,8 @@ td {padding-right: 1.5rem;}
     .main-position { margin: 8rem 0rem 0rem 1.5rem }
     .ms-6 { margin-left: 4rem; }
 
+    .contact-text { font-size: var(--font-size-28);}
+
     #backgroundAnimation { position: fixed; top: 0; left: 100px; width: 100%; height: 100%; opacity: 0.15; z-index: -1;}
     #scrollAnimation { position: relative; top: 100px; left: 400px; width: 8%; height: 8%; opacity: 0.8; z-index: -1;}
     #submit {font-size: var(--font-size-24)}
@@ -237,7 +245,7 @@ td {padding-right: 1.5rem;}
     h1 { font-size: var(--font-size-80); font-family: var(--font-sans-serif); font-weight: var(--font-weight-bold)}
     h2 { font-size: var(--font-size-60); font-family: var(--font-sans-serif); font-weight: var(--font-weight-bold)}
     h3 { font-size: var(--font-size-40); font-family: var(--font-sans-serif); font-weight: var(--font-weight-bold)}
-    h4 { font-size: var(--font-size-22); font-family: var(--font-sans-serif); font-weight: var(--font-weight-bold)}
+    h4 { font-size: var(--font-size-22); font-family: var(--font-sans-serif); font-weight: var(--font-semibold-bold)}
 
     li { font-size: var(--font-size-22); font-family: var(--font-sans-serif-condensed); font-weight: var(--font-weight-regular)}
 
@@ -252,6 +260,8 @@ td {padding-right: 1.5rem;}
 
     .main-position { margin: 10rem 0rem 0rem 2rem }
     .ms-6 { margin-left: 6rem; }
+
+    .contact-text { font-size: var(--font-size-30);}
 
     #backgroundAnimation { position: fixed; top: 0; left: 250px; width: 100%; height: 100%; opacity: 0.15; z-index: -1; }
     #scrollAnimation { position: relative; top: 100px; left: 600px; width: 8%; height: 8%; opacity: 0.8; z-index: -1;}

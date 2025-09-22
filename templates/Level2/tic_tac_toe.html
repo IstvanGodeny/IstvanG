@@ -6,25 +6,20 @@
 
 {%block nav_items%}
     {% if active_page == "tic_tac_toe" %}
-        <li class="nav_item me-5">
-            <a class="nav-link" href="/" onclick="if (history.length > 1) { history.back(); return false; }" style="text-decoration: none;">
-                <span data-tooltip="Click to go back" style='font-size:30px;'>
-                    &#10554;
-                </span>
-            </a>
+
+        <li class="nav-item me-5">
+            <a class="nav-link" href="{{url_for('home')}}">Home</a>
         </li>
 
         <li class="nav-item me-5">
-            <a data-tooltip="Home" class="nav-link" href="{{url_for('home')}}">Home</a>
+            <a class="nav-link" href="#screen_recording">Screen Recording</a>
         </li>
 
         <li class="nav-item me-5">
-            <a data-tooltip="Top of this page" class="nav-link" href="#home">Tic Tac Toe Game</a>
+            <a class="nav-link" href="#description">Description</a>
         </li>
 
-        <li class="nav-item me-5">
-            <a data-tooltip="Screen Recording" class="nav-link" href="#screen_recording">Screen Recording</a>
-        </li>
+        
     {%endif%}
 {%endblock%}
 
@@ -34,16 +29,25 @@
         <div class="ms-6">
             
             <!-- Title -->
-            <div style="margin-bottom: 5rem">
+            <div>
                 <h1>
                     _> Tic Tac Toe Game
                 </h1>
             </div>
 
-            <!-- Description -->
+            <!-- Screenshots, Screen recording -->
             <div>
-                <h2 class="mb-4">Description</h2>
-                <h4 style="line-height: 1.6">Tic Tac Toe Game is an interactive desktop application developed with KivyMD, combining a modern material design interface with classic gameplay. Players can enter their names at the start, and the app dynamically tracks and displays their scores. The game includes smart dialogs for handling player setup, reset confirmation, quit warnings, as well as winner and draw announcements, ensuring a smooth user experience. A responsive design adapts the layout and font sizes to different window sizes, making the interface accessible across devices. The board uses color-coded symbols (X and O) to distinguish between players, with hover effects and styled buttons enhancing interactivity. After each round, the board resets automatically, updating scores while preserving the flow of play. Users can also fully reset the game, which clears scores and reinitializes player setup. This project demonstrates my ability to integrate custom UI components, responsive layouts, and event-driven logic in Python. It reflects a balance between functional gameplay and thoughtful user experience design.</h4>
+                <h3 id="screen_recording" class="mb-4" style="margin-top: 2rem; padding-top: 4rem;">Screen Recording</h3>
+                <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;">
+                    <iframe
+                        src="https://www.youtube.com/embed/Y4VbqX8nhJ4"
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"
+                        allow="autoplay; encrypted-media"
+                        allowfullscreen
+                        loading="lazy"
+                        title="Tic Tac Toe Game - Screen recording">
+                    </iframe>
+                </div>
             </div>
 
             <div class="mt-5 row mb-3">
@@ -63,84 +67,17 @@
                 </div>
             </div>
 
-            <!-- Navigation chevrons -->
-            <div style="margin-top: 2.5rem; margin-bottom: 10rem">
-                <div class="col-auto">
-                    <a href="#screen_recording" style="text-decoration: none">
-                        <span data-tooltip="Bottom">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-down-double.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-
-                    <a href="#screen_recording" style="text-decoration: none">
-                        <span data-tooltip="Next">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-down.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-
-                    <a href="#home" style="text-decoration: none">
-                        <span data-tooltip="Previous">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-up.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-
-                    <a href="#home" style="text-decoration: none">
-                        <span data-tooltip="Top">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-up-double.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-                </div>
-            </div>
-        
+            <!-- Description -->
+            <div id="description" style="margin-top: 5rem; margin-bottom: 8rem;">
+                <h2 class="mb-4">Description</h2>
+                <h4 style="line-height: 1.6">Tic Tac Toe Game is an interactive desktop application developed with <strong>KivyMD</strong>, combining a modern material design interface with classic gameplay.    </h4>
+                <h4 style="line-height: 1.6">Players can enter their names at the start, and the app dynamically tracks and displays their scores.</h4>
+                <h4 style="line-height: 1.6">The game includes smart dialogs for handling player setup, reset confirmation, quit warnings, as well as winner and draw announcements, ensuring a smooth user experience.</h4>
+                <h4 style="line-height: 1.6">A <strong>responsive design</strong> adapts the layout and font sizes to different window sizes, making the interface accessible across devices.</h4>
+                <h4 style="line-height: 1.6">The board uses color-coded symbols (X and O) to distinguish between players, with hover effects and styled buttons enhancing interactivity.</h4>
+                <h4 style="line-height: 1.6">After each round, the board resets automatically, updating scores while preserving the flow of play. Users can also fully reset the game, which clears scores and reinitializes player setup.</h4>
+                <h4 style="line-height: 1.6">This project demonstrates my ability to integrate custom UI components, responsive layouts, and event-driven logic in Python. It reflects a balance between functional gameplay and thoughtful user experience design.</h4>
+            </div>        
         </div>
-
-            
-        <div class="ms-6">
-            <!-- Screenshots, Screen recording -->
-            <div>
-                <h3 id="screen_recording" class="mb-4" style="padding-top: 4rem;">Screen Recording</h3>
-                <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;">
-                    <iframe
-                        src="https://www.youtube.com/embed/Y4VbqX8nhJ4"
-                        style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"
-                        allow="autoplay; encrypted-media"
-                        allowfullscreen
-                        loading="lazy"
-                        title="Tic Tac Toe Game - Screen recording">
-                    </iframe>
-                </div>
-            </div>
-
-            <!-- Navigation chevrons -->
-            <div style="margin-top: 2.5rem; margin-bottom: 10rem">
-                <div class="col-auto">
-                    <a href="#screen_recording" style="text-decoration: none">
-                        <span data-tooltip="Bottom">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-down-double.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-
-                    <a href="#screen_recording" style="text-decoration: none">
-                        <span data-tooltip="Next">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-down.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-
-                    <a href="#home" style="text-decoration: none">
-                        <span data-tooltip="Previous">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-up.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-
-                    <a href="#home" style="text-decoration: none">
-                        <span data-tooltip="Top">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-up-double.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-
     </main>
 {% endblock %}

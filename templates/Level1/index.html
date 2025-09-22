@@ -16,28 +16,25 @@
 
 {%block nav_items%}
     {% if active_page == "#home" %}
-        <li class="nav_item me-5">
-            <a class="nav-link" href="/" onclick="if (history.length > 1) { history.back(); return false; }" style="text-decoration: none;">
-                <span data-tooltip="Click to go back" style='font-size:30px;'>
-                    &#10554;
-                </span>
-            </a>
-        </li>
         
         <li class="nav-item me-5">
-            <a data-tooltip="Top of this page" class="nav-link" href="#home">Home</a>
+            <a class="nav-link" href="#home">Home</a>
         </li>
 
         <li class="nav-item me-5">
-            <a data-tooltip="Jump to About section" class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#about">About</a>
         </li>
 
         <li class="nav-item me-5">
-            <a data-tooltip="Jump to Credentials section" class="nav-link" href="#credentials">Credentials</a>
+            <a class="nav-link" href="#credentials">Credentials</a>
         </li>
 
         <li class="nav-item me-5">
-            <a data-tooltip="Jump to My Favorite Projects" class="nav-link" href="#favorite_projects">Favorite Projects</a>
+            <a class="nav-link" href="#favorite_projects">Favorite Projects</a>
+        </li>
+
+        <li class="nav-item me-5">
+            <a class="nav-link" href="#contact">Contact</a>
         </li>
     {%endif%}
 {%endblock%}
@@ -48,11 +45,11 @@
 
         <!-- Introduction, welcome -->
         <div class="ms-6">
-            <h1 >_> Hi, I'm Istvan,</h1>
-            <h3 style="margin-bottom: 10rem">and I'm a Python Developer</h3>
-            <a href="#contact" class="btn btn-custom btn-custom-text">Contact Me</a>
+            <h1 style="padding-top: 5rem;">_> Hi, I'm Istvan,</h1>
+            <h3>and I'm a Python Developer</h3>
+            <!--a href="#contact" class="btn btn-custom btn-custom-text">Contact Me</a-->
 
-            <!-- Navigation chevrons -->
+            <!-- Navigation chevrons
             <div style="margin-top: 2.5rem">
                 <div class="col-auto">
                     <a href="#footer" style="text-decoration: none">
@@ -79,7 +76,7 @@
                         </span>
                     </a>
                 </div>
-            </div>
+            </div> -->
 
         </div>
         
@@ -88,54 +85,18 @@
 
         <!-- About Istvan Section -->
         <div id="about" class="ms-6">
-            <h1 style="margin-top: 16rem; margin-bottom: 5rem; padding-top: 4rem;">_> About Istvan Godeny</h1>
-            <!--<h4 style="line-height: 1.6">Over the past 2 years, I was an independent program developer learner.
-                During this time, I've gained skills in Python programming, both in scripts and GUI.
-                I built several projects to practise. I focused on the Python programming language, but I got acquainted with others, too, such as HTML and CSS.
-                Previously, in my life, I was a university student when I got the ability to use C and Java languages, too.</h4>
-            <h4 style="line-height: 0.8">I am a well-motivated developer who is passionate about information science.</h4>-->
+            <h1 style="margin-top: 10rem; margin-bottom: 5rem; padding-top: 4rem;">_> About Istvan Godeny</h1>
 
             <h4 style="line-height: 1.6">I am a motivated and goal-oriented Python developer, passionate about creating efficient and creative solutions. I’ve built my skills through self-learning, persistence, and continuous growth. My main interests are backend development, machine learning, and cybersecurity.</h4>
 
-            <a style="margin-top: 10rem" href="{{ url_for('about') }}"
+            <a style="margin-top: 5rem" href="{{ url_for('about') }}"
                 class="btn btn-custom btn-custom-text">More About Me</a>
-
-                
-                
-            <!-- Navigation chevrons -->
-            <div style="margin-top: 2.5rem">
-                <div class="col-auto">
-                    <a href="#footer" style="text-decoration: none">
-                        <span data-tooltip="Bottom">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-down-double.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-
-                    <a href="#credentials" style="text-decoration: none">
-                        <span data-tooltip="Next">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-down.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-
-                    <a href="#home" style="text-decoration: none">
-                        <span data-tooltip="Previous">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-up.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-
-                    <a href="#home" style="text-decoration: none">
-                        <span data-tooltip="Top">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-up-double.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-                </div>
-            </div>
 
         </div>
 
         <!-- Credentials Section -->
         <div class="ms-6">
-            <h1 id="credentials" style="margin-top: 16rem; padding-top: 4rem;">_> Credentials</h1>
+            <h1 id="credentials" style="margin-top: 10rem; padding-top: 4rem;">_> Credentials</h1>
 
             <!-- List of the icons -->
             <div class="icon-container" style="margin-top: 5rem">
@@ -166,7 +127,7 @@
             </div>
 
             <div>
-                <table style="margin-top: 5rem; float: right;">
+                <table style="margin-top: 5rem;">
                     <tbody>
                         <tr valign="top">
                             <td>
@@ -177,7 +138,7 @@
                             <td>
                                 <div>
                                     <h4>Python Pro Bootcamp</h4>
-                                    <h5>London, UK (2023-2025) - Udemy</h5>
+                                    <h5 style="color: white;">London, UK (2023-2025) - Udemy</h5>
                                 </div>
                             </td>
                         </tr>
@@ -187,7 +148,7 @@
                             <td>
                                 <div>
                                     <h4>Software Engineering</h4>
-                                    <h5>Szeged, Hungary - University of Szeged</h5>
+                                    <h5 style="color:white;">Szeged, Hungary - University of Szeged</h5>
                                 </div>
                             </td>
                         </tr>
@@ -237,40 +198,11 @@
                 </table>
             </div>
 
-            <!-- Navigation chevrons -->
-            <div style="margin-top: 32.5rem">
-                <div class="col-auto">
-                    <a href="#footer" style="text-decoration: none">
-                        <span data-tooltip="Bottom">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-down-double.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-
-                    <a href="#favorite_projects" style="text-decoration: none">
-                        <span data-tooltip="Next">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-down.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-
-                    <a href="#about" style="text-decoration: none">
-                        <span data-tooltip="Previous">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-up.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-
-                    <a href="#home" style="text-decoration: none">
-                        <span data-tooltip="Top">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-up-double.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-                </div>
-            </div>
-
         </div>
 
         <!-- Favorite Projects Section -->
         <div id="favorite_projects" class="ms-6">
-            <h2 style="margin-top: 16rem; margin-bottom: 5rem; padding-top: 4rem;">_> My Favorite Projects</h2>
+            <h2 style="margin-top: 10rem; margin-bottom: 5rem; padding-top: 4rem;">_> My Favorite Projects</h2>
             <div class="row mt-5">
                 <!-- Note Application -->
                 <div class="col-xxl-6 mt-2" style="margin-bottom: 5rem">
@@ -282,13 +214,15 @@
                         </div>
                         <div class="col">
                             <h3 class="mb-4">Note Application</h3>
-                            <div class="mb-5">
-                                <img class="screenshots" src="/static/assets/png/note_app_screenshot.png" style="padding-bottom: 0rem; width: 70%;"><br>
-                            </div>
-                            <a data-tooltip="Click to get more information" href="{{ url_for('note_app') }}" class="link-text">
-                                read more...
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                            <a href="{{ url_for('note_app') }}" class="link-text" style="text-decoration: none">
+                                <div class="mb-3">
+                                    <img class="screenshots" src="/static/assets/png/note_app_screenshot.png" style="padding-bottom: 0rem; width: 70%;"><br>
+                                </div>
+                            
+                                read more...<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 120 120" enable-background="new 0 0 120 120" xml:space="preserve" fill="#A8D8CA">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <g id="SVGRepo_iconCarrier"> <polygon fill="#4ECEAD" points="102.296,59.957 42.264,119.99 25.605,103.34 85.639,43.299 "/> <polygon fill="#4ECEAD" points="85.74,76.71 25.715,16.653 42.373,0.011 102.391,60.067 "/> </g>
                                 </svg>
                             </a>
                         </div>
@@ -305,13 +239,14 @@
                         </div>
                         <div class="col">
                             <h3 class="mb-4">Tic Tac Toe Game</h3>
-                            <div class="mb-5">
-                                <img class="screenshots" src="/static/assets/png/tic_tac_toe_game_screenshot.png" style="padding-bottom: 0rem; width: 70%;"><br>
-                            </div>
-                            <a data-tooltip="Click to get more information" href="{{url_for('tic_tac_toe')}}" class="link-text">
-                                read more...
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                            <a href="{{ url_for('tic_tac_toe') }}" class="link-text" style="text-decoration: none">
+                                <div class="mb-3">
+                                    <img class="screenshots" src="/static/assets/png/tic_tac_toe_game_screenshot.png" style="padding-bottom: 0rem; width: 70%;"><br>
+                                </div>
+                                read more...<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 120 120" enable-background="new 0 0 120 120" xml:space="preserve" fill="#A8D8CA">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <g id="SVGRepo_iconCarrier"> <polygon fill="#4ECEAD" points="102.296,59.957 42.264,119.99 25.605,103.34 85.639,43.299 "/> <polygon fill="#4ECEAD" points="85.74,76.71 25.715,16.653 42.373,0.011 102.391,60.067 "/> </g>
                                 </svg>
                             </a>
                         </div>
@@ -328,13 +263,14 @@
                         </div>
                         <div class="col">
                             <h3 class="mb-4">Image Watermarking</h3>
-                            <div class="mb-5">
-                                <img class="screenshots" src="/static/assets/png/image_watermarking_app_screenshot.png" style="padding-bottom: 0rem; width: 70%;"><br>
-                            </div>
-                            <a data-tooltip="Click to get more information" href="{{url_for('image_watermarking_app')}}" class="link-text">
-                                read more...
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                            <a href="{{ url_for('image_watermarking_app') }}" class="link-text" style="text-decoration: none">
+                                <div class="mb-3">
+                                    <img class="screenshots" src="/static/assets/png/image_watermarking_app_screenshot.png" style="padding-bottom: 0rem; width: 70%;"><br>
+                                </div>
+                                read more...<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 120 120" enable-background="new 0 0 120 120" xml:space="preserve" fill="#A8D8CA">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <g id="SVGRepo_iconCarrier"> <polygon fill="#4ECEAD" points="102.296,59.957 42.264,119.99 25.605,103.34 85.639,43.299 "/> <polygon fill="#4ECEAD" points="85.74,76.71 25.715,16.653 42.373,0.011 102.391,60.067 "/> </g>
                                 </svg>
                             </a>
                         </div>
@@ -346,52 +282,23 @@
                     <div class="row">
                         <div class="col-1 me-4">
                             <span>
-                                <img src="{{ url_for('static', filename='assets/svg/favicon.svg') }}" width="48" height="48" alt="SVG Icon">
+                                <img src="{{ url_for('static', filename='assets/svg/favicon-2.svg') }}" width="55" height="55" alt="SVG Icon">
                             </span>
                         </div>
                         <div class="col">
                             <h3 class="mb-4">Portfolio Website</h3>
-                            <div class="mb-5">
-                                <img class="screenshots" src="/static/assets/png/portfolio_website_screenshot.png" style="padding-bottom: 0rem; width: 70%;"><br>
-                            </div>
-                            <a data-tooltip="Click to get more information" href="{{url_for('portfolio_website')}}" class="link-text">
-                                read more...
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                            <a href="{{ url_for('portfolio_website') }}" class="link-text" style="text-decoration: none">
+                                <div class="mb-3">
+                                    <img class="screenshots" src="/static/assets/png/portfolio_website_screenshot.png" style="padding-bottom: 0rem; width: 70%;"><br>
+                                </div>
+                                read more...<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 120 120" enable-background="new 0 0 120 120" xml:space="preserve" fill="#A8D8CA">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <g id="SVGRepo_iconCarrier"> <polygon fill="#4ECEAD" points="102.296,59.957 42.264,119.99 25.605,103.34 85.639,43.299 "/> <polygon fill="#4ECEAD" points="85.74,76.71 25.715,16.653 42.373,0.011 102.391,60.067 "/> </g>
                                 </svg>
                             </a>
                         </div>
                     </div>
-                </div>
-
-            </div>
-
-            <!-- Navigation chevrons -->
-            <div style="margin-top: 2.5rem">
-                <div class="col-auto">
-                    <a href="#footer" style="text-decoration: none">
-                        <span data-tooltip="Bottom">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-down-double.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-
-                    <a href="#contact" style="text-decoration: none">
-                        <span data-tooltip="Next">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-down.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-
-                    <a href="#credentials" style="text-decoration: none">
-                        <span data-tooltip="Previous">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-up.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-
-                    <a href="#home" style="text-decoration: none">
-                        <span data-tooltip="Top">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-up-double.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
                 </div>
             </div>
 
@@ -399,7 +306,7 @@
 
         <!-- Conatct Section -->
         <div class="ms-6" style="margin-bottom: 10rem">
-            <h1 id="contact" style="margin-top: 16rem; margin-bottom: 5rem; padding-top: 4rem;">_> Contact</h1>
+            <h1 id="contact" style="margin-top: 10rem; margin-bottom: 5rem; padding-top: 4rem;">_> Contact</h1>
 
             <h2 style="mb-4">
                 Istvan Godeny
@@ -412,25 +319,25 @@
             <div class="row mb-3">
                 <div class="col-auto">
                 <span>
-                    <img src="{{ url_for('static', filename='assets/svg/map-location.svg') }}" width="48" height="48" alt="SVG Icon">
+                    <img src="{{ url_for('static', filename='assets/svg/map-location.svg') }}" width="35" height="35" alt="SVG Icon">
                 </span>
                 </div>
                 <div class="col">
-                <h3>London, UK</a></h3>
+                <h3 class="contact-text">London, UK</a></h3>
                 </div>
             </div>
 
             <div class="row mb-3">
                 <div class="col-auto">
                 <span>
-                    <img src="{{ url_for('static', filename='assets/svg/send-email.svg') }}" width="48" height="48" alt="SVG Icon">
+                    <img src="{{ url_for('static', filename='assets/svg/send-email.svg') }}" width="35" height="35" alt="SVG Icon">
                 </span>
                 </div>
                 <div class="col">
-                <h3>
-                    <a data-tooltip="Click to send a direct message" href="{{ url_for('contact') }}" style="text-decoration: none">Send a message
+                <h3 class="contact-text">
+                    <a href="{{ url_for('contact') }}" style="text-decoration: none">Message me
                         <span>
-                            <img src="{{ url_for('static', filename='assets/svg/right-chevron.svg') }}" width="30" height="30" alt="SVG Icon">
+                            <img src="{{ url_for('static', filename='assets/svg/right-chevron.svg') }}" width="20" height="20" alt="SVG Icon">
                         </span>
                     </a>
                 </h3>
@@ -440,49 +347,19 @@
             <div class="row mb-3">
                 <div class="col-auto">
                 <span>
-                    <img src="{{ url_for('static', filename='assets/svg/linkedin-linked-in.svg') }}" width="48" height="48" alt="SVG Icon">
+                    <img src="{{ url_for('static', filename='assets/svg/linkedin-linked-in.svg') }}" width="35" height="35" alt="SVG Icon">
                 </span>
                 </div>
                 <div class="col">
-                <h3>
-                    <a data-tooltip="Click to open my LinkedIn page" href="https://www.linkedin.com/in/istvan-godeny/" style="text-decoration: none" target="_blank">Visit my LinkedIn
+                <h3 class="contact-text">
+                    <a href="https://www.linkedin.com/in/istvan-godeny/" style="text-decoration: none" target="_blank">Visit my LinkedIn
                         <span>
-                            <img src="{{ url_for('static', filename='assets/svg/right-chevron.svg') }}" width="30" height="30" alt="SVG Icon">
+                            <img src="{{ url_for('static', filename='assets/svg/right-chevron.svg') }}" width="20" height="20" alt="SVG Icon">
                         </span>
                     </a>
                 </h3>
                 </div>
             </div>
-
-            <!-- Navigation chevrons -->
-            <div style="margin-top: 2.5rem">
-                <div class="col-auto">
-                    <a href="#footer" style="text-decoration: none">
-                        <span data-tooltip="Bottom">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-down-double.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-
-                    <a href="#contact" style="text-decoration: none">
-                        <span data-tooltip="Next">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-down.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-
-                    <a href="#favorite_projects" style="text-decoration: none">
-                        <span data-tooltip="Previous">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-up.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-
-                    <a href="#home" style="text-decoration: none">
-                        <span data-tooltip="Top">
-                            <img src="{{ url_for('static', filename='assets/svg/chevron-up-double.svg') }}" width="30" height="30" alt="SVG Icon">
-                        </span>
-                    </a>
-                </div>
-            </div>
-
         </div>
         <div id="bottom" style="position: relative; top:-1px; height:1px;"></div>
     </main>
