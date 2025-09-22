@@ -118,7 +118,7 @@ h4 { font-size: var(--font-size-18); font-family: var(--font-sans-serif); font-w
 
 li { font-size: var(--font-size-16); font-family: var(--font-sans-serif-condensed); font-weight: var(--font-weight-regular) }
 
-table {float: right;}
+td {padding-right: 1.5rem;}
 
 .link-text { font-size: var(--font-size-16); font-family: var(--font-sans-serif); font-weight: var(--font-weight-bold); color: var(--green-2)}
 
@@ -148,7 +148,7 @@ table {float: right;}
 
     li { font-size: var(--font-size-18); font-family: var(--font-sans-serif-condensed); font-weight: var(--font-weight-regular)}
 
-    table {float: left;}
+    td {padding-right: 1.5rem;}
 
     .link-text { font-size: var(--font-size-18); font-family: var(--font-sans-serif); font-weight: var(--font-weight-bold); color: var(--green-2)}
 
@@ -179,7 +179,7 @@ table {float: right;}
 
     li { font-size: var(--font-size-20); font-family: var(--font-sans-serif-condensed); font-weight: var(--font-weight-regular)}
 
-    table {float: right;}
+    td {padding-right: 2.5rem;}
 
     .link-text { font-size: var(--font-size-20); font-family: var(--font-sans-serif); font-weight: var(--font-weight-bold); color: var(--green-2)}
 
@@ -210,7 +210,7 @@ table {float: right;}
 
     li { font-size: var(--font-size-22); font-family: var(--font-sans-serif-condensed); font-weight: var(--font-weight-regular)}
 
-    table {float: right;}
+    td {padding-right: 3.5rem;}
 
     .link-text { font-size: var(--font-size-22); font-family: var(--font-sans-serif); font-weight: var(--font-weight-bold); color: var(--green-2)}
 
@@ -241,7 +241,7 @@ table {float: right;}
 
     li { font-size: var(--font-size-22); font-family: var(--font-sans-serif-condensed); font-weight: var(--font-weight-regular)}
 
-    table {float: right;}
+    td {padding-right: 5rem;}
 
     .link-text { font-size: var(--font-size-22); font-family: var(--font-sans-serif); font-weight: var(--font-weight-bold); color: var(--green-2)}
 
