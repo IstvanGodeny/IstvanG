@@ -136,6 +136,7 @@ td {padding-right: 1.5rem;}
 #backgroundAnimation { position: fixed; top: 0; left: 00px; width: 100%; height: 100%; opacity: 0.15; z-index: -1;}
 #scrollAnimation { position: relative; top: 100px; left: 200px; width: 8%; height: 8%; opacity: 0.8; z-index: -1;}
 #submit {font-size: var(--font-size-18)}
+#appIcon {width: 30px; height: 30px;}
 
 @media (min-width: 576px) {                                         /* Small screens */
     p { font-size: var(--font-size-18); font-family: var(--font-sans-serif-condensed); font-weight: var(--font-weight-regular)}
@@ -168,6 +169,7 @@ td {padding-right: 1.5rem;}
     #backgroundAnimation { position: fixed; top: 0; left: 00px; width: 100%; height: 100%; opacity: 0.15; z-index: -1;}
     #scrollAnimation { position: relative; top: 100px; left: 225px; width: 8%; height: 8%; opacity: 0.8; z-index: -1;}
     #submit {font-size: var(--font-size-20)}
+    #appIcon {width: 30px; height: 30px;}
 }
 
 @media (min-width: 768px) {                                         /* Medium screens */
@@ -201,6 +203,7 @@ td {padding-right: 1.5rem;}
     #backgroundAnimation { position: fixed; top: 0; left: 00px; width: 100%; height: 100%; opacity: 0.15; z-index: -1;}
     #scrollAnimation { position: relative; top: 100px; left: 300px; width: 8%; height: 8%; opacity: 0.8; z-index: -1;}
     #submit {font-size: var(--font-size-22)}
+    #appIcon {width: 40px; height: 40px;}
 }
 
 @media (min-width: 992px) {                                        /* Large screens */
@@ -234,6 +237,7 @@ td {padding-right: 1.5rem;}
     #backgroundAnimation { position: fixed; top: 0; left: 100px; width: 100%; height: 100%; opacity: 0.15; z-index: -1;}
     #scrollAnimation { position: relative; top: 100px; left: 400px; width: 8%; height: 8%; opacity: 0.8; z-index: -1;}
     #submit {font-size: var(--font-size-24)}
+    #appIcon {width: 50px; height: 50px;}
 }
 
 @media (min-width: 1200px) {                                        /* Extra large screens */
@@ -264,8 +268,9 @@ td {padding-right: 1.5rem;}
     .contact-text { font-size: var(--font-size-30);}
 
     #backgroundAnimation { position: fixed; top: 0; left: 250px; width: 100%; height: 100%; opacity: 0.15; z-index: -1; }
-    #scrollAnimation { position: relative; top: 100px; left: 600px; width: 8%; height: 8%; opacity: 0.8; z-index: -1;}
+    #scrollAnimation { position: relative; top: 100px; left: 600px; width: 8%; height: 8%; opacity: 0.8; z-index: 1;}
     #submit {font-size: var(--font-size-26)}
+    #appIcon {width: 60px; height: 60px;}
 }
 
 
@@ -491,7 +496,6 @@ a {
     background-color: var(--bs-btn-bg);
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
 }
-
 #submit:hover {
     color: var(--green-0);                                      /* Button text color for hovering*/
     background-color: var(--green-1);                           /* Button background for hovering */
@@ -502,4 +506,40 @@ a {
     border-color: var(--green-1);                               /* Button border color when pressed */
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);         /* ??? */
     color: white;
+}
+
+/* Card for apllications */
+#appCard{
+    border-color: transparent;
+    padding: 0.5rem;
+}
+#appCard:hover {
+    border-color: var(--bs-card-border-color);
+    background-color: var(--green-5);
+}
+#appCard:active {
+    border-color: #fff;
+    background-color: var(--green-0);
+}
+
+/* Contact links */
+.contactLink:hover {
+    color: #FFFFFF;
+}
+.contactIcon {
+    fill: var(--body-text-color);
+}
+.contactIcon:hover {
+    fill: #FFFFFF;
+}
+
+/* Projects links */
+.link-text:hover {
+    color: #FFFFFF;
+}
+.linkIcon {
+    fill: var(--green-6);
+}
+.linkIcon:hover {
+    fill: #FFFFFF;
 }
